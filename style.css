@@ -1,3 +1,112 @@
+:root {
+    --surface: #121212;
+    --elevation0dp: hsla(0, 100%, 100%, 0.00);
+    --elevation1dp: hsla(0, 100%, 100%, 0.05);
+    --elevation2dp: hsla(0, 100%, 100%, 0.07);
+    --elevation3dp: hsla(0, 100%, 100%, 0.08);
+    --elevation4dp: hsla(0, 100%, 100%, 0.09);
+    --elevation6dp: hsla(0, 100%, 100%, 0.11);
+    --elevation8dp: hsla(0, 100%, 100%, 0.12);
+    --elevation12dp: hsla(0, 100%, 100%, 0.14);
+    --elevation16dp: hsla(0, 100%, 100%, 0.15);
+    --elevation24dp: hsla(0, 100%, 100%, 0.16);
+    --primary: #ffe082;
+    --primary-light: #ffffb3;
+    --primary-dark: #caae53;
+    --error: #CF6679;
+}
+
+.material-icons-round.md-18 {
+    font-size: 18px;
+}
+
+.material-icons-round.md-24 {
+    font-size: 24px;
+}
+
+.material-icons-round.md-36 {
+    font-size: 36px;
+}
+
+.material-icons-round.md-48 {
+    font-size: 48px;
+}
+
+.material-icons-round {
+    color: var(--primary);
+}
+
+.material-icons-round.md-inactive {
+    color: rgba(255, 255, 255, 0.38);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--primary);
+}
+
 body {
-    background-color: #121212;
+    padding: 0;
+    margin: 0;
+    background-color: var(--surface);
+    color: #FFF;
+    opacity: 0.87;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    height: 72px;
+    width: 100%;
+    background-color: var(--elevation4dp);
+}
+
+header {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    height: 72px;
+    width: 100%;
+    background-color: var(--elevation4dp);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#home_page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+#home_page * {
+    padding: 8px;
+}
+
+nav {
+    display: block;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 24px;
+}
+
+nav a {
+    margin: 8px;
+    padding-bottom: 8px;
+    border-bottom: #caae53 1px solid;
 }
