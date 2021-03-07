@@ -14,7 +14,10 @@
     --primary-light: #ffffb3;
     --primary-dark: #caae53;
     --error: #CF6679;
+    --inactive: rgba(255, 224, 130, 0.38);
 }
+
+/* TODO not opacity colors */
 
 .material-icons-round.md-18 {
     font-size: 18px;
@@ -36,10 +39,6 @@
     color: var(--primary);
 }
 
-.material-icons-round.md-inactive {
-    color: rgba(255, 255, 255, 0.38);
-}
-
 *, *::after, *::before {
     box-sizing: border-box;
 }
@@ -56,57 +55,102 @@ body {
     color: #FFF;
     opacity: 0.87;
     font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
-}
-
-#container {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
 }
 
-footer {
+#container {
+    margin-top: 72px;
+    width: 100%;
+}
+
+footer, header {
+    background-color: var(--elevation4dp);
     height: 72px;
     width: 100%;
-    background-color: var(--elevation4dp);
 }
 
 header {
     position: fixed;
     margin: auto;
     top: 0;
-    height: 72px;
-    width: 100%;
-    background-color: var(--elevation4dp);
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-#home_page {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding-left: 24px;
-    margin-right: auto;
-    text-decoration: none;
-}
-
-#home_page * {
-    padding: 8px;
 }
 
 nav {
-    display: block;
     margin-left: auto;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 24px;
+    height: 72px;
 }
 
-nav a {
-    margin: 8px;
-    padding-bottom: 8px;
-    border-bottom: #caae53 1px solid;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    align-content: center;
+    line-height: 72px;
+    padding: 0 8px;
+}
+
+nav ul li a {
+    display: inline-block;
+}
+
+nav ul:hover li a {
+    color: var(--inactive);
+}
+
+nav ul:hover li #underline {
+    background-color: var(--inactive);
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+nav ul li a:hover #underline {
+    background-color: var(--primary);
+}
+
+#underline {
+    height: 8px;
+    background-color: var(--primary);
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 0;
+}
+
+#home_page {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    text-decoration: none;
+    height: 72px;
+}
+
+#home_page span {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    #home_page span {
+        display: inline-block;
+    }
+}
+
+#logo {
+    background-image: url(img/logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    margin-right: 16px;
 }
