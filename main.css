@@ -1,23 +1,21 @@
 :root {
     --surface: #121212;
-    --elevation0dp: hsla(0, 100%, 100%, 0.00);
-    --elevation1dp: hsla(0, 100%, 100%, 0.05);
-    --elevation2dp: hsla(0, 100%, 100%, 0.07);
-    --elevation3dp: hsla(0, 100%, 100%, 0.08);
-    --elevation4dp: hsla(0, 100%, 100%, 0.09);
-    --elevation6dp: hsla(0, 100%, 100%, 0.11);
-    --elevation8dp: hsla(0, 100%, 100%, 0.12);
-    --elevation12dp: hsla(0, 100%, 100%, 0.14);
-    --elevation16dp: hsla(0, 100%, 100%, 0.15);
-    --elevation24dp: hsla(0, 100%, 100%, 0.16);
+    --elevation0dp: var(--surface);
+    --elevation1dp: #1e1e1e;
+    --elevation2dp: #222222;
+    --elevation3dp: #242424;
+    --elevation4dp: #272727;
+    --elevation6dp: #2c2c2c;
+    --elevation8dp: #2e2e2e;
+    --elevation12dp: #333333;
+    --elevation16dp: #343434;
+    --elevation24dp: #383838;
     --primary: #ffe082;
     --primary-light: #ffffb3;
     --primary-dark: #caae53;
     --error: #CF6679;
     --inactive: rgba(255, 224, 130, 0.38);
 }
-
-/* TODO not opacity colors */
 
 .material-icons-round.md-18 {
     font-size: 18px;
@@ -77,6 +75,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-transform: uppercase;
 }
 
 nav {
@@ -95,39 +94,23 @@ nav ul li {
     position: relative;
     align-content: center;
     line-height: 72px;
-    padding: 0 8px;
+    padding: 0 4px;
 }
 
 nav ul li a {
     display: inline-block;
 }
 
-nav ul:hover li a {
-    color: var(--inactive);
-}
-
-nav ul:hover li #underline {
-    background-color: var(--inactive);
-}
-
-nav ul li a:hover {
-    color: var(--primary);
-}
-
-nav ul li a:hover #underline {
-    background-color: var(--primary);
-}
-
 #underline {
     height: 8px;
     background-color: var(--primary);
     position: absolute;
-    left: 8px;
-    right: 8px;
+    left: 4px;
+    right: 4px;
     bottom: 0;
 }
 
-#home_page {
+#home-page {
     margin-right: auto;
     display: flex;
     align-items: center;
@@ -136,14 +119,8 @@ nav ul li a:hover #underline {
     height: 72px;
 }
 
-#home_page span {
+#home-page span {
     display: none;
-}
-
-@media (min-width: 640px) {
-    #home_page span {
-        display: inline-block;
-    }
 }
 
 #logo {
@@ -153,4 +130,29 @@ nav ul li a:hover #underline {
     height: 32px;
     width: 32px;
     margin-right: 16px;
+}
+
+@media (min-width: 640px) {
+    #underline {
+        left: 8px;
+        right: 8px;
+    }
+    nav ul li {
+        padding: 0 8px;
+    }
+    #home-page span {
+        display: inline-block;
+    }
+    nav ul:hover li a {
+        color: var(--inactive);
+    }
+    nav ul:hover li #underline {
+        background-color: var(--inactive);
+    }
+    nav ul li a:hover {
+        color: var(--primary);
+    }
+    nav ul li a:hover #underline {
+        background-color: var(--primary);
+    }
 }
