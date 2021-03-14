@@ -41,6 +41,8 @@
     box-sizing: border-box;
 }
 
+/* Outline on focus change color */
+
 a:link, a:visited {
     text-decoration: none;
     color: var(--primary);
@@ -66,7 +68,11 @@ footer, header {
     background-color: var(--elevation4dp);
     height: 72px;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
+
+/* Mobile navigation drawer */
 
 header {
     position: fixed;
@@ -94,11 +100,11 @@ nav ul li {
     position: relative;
     align-content: center;
     line-height: 72px;
-    padding: 0 4px;
 }
 
 nav ul li a {
     display: inline-block;
+    padding: 0 4px;
 }
 
 #underline {
@@ -132,12 +138,21 @@ nav ul li a {
     margin-right: 16px;
 }
 
+footer {
+    justify-content: center;
+    color: var(--primary)
+}
+
+footer * {
+    padding: 0 8px;
+}
+
 @media (min-width: 640px) {
     #underline {
         left: 8px;
         right: 8px;
     }
-    nav ul li {
+    nav ul li a {
         padding: 0 8px;
     }
     #home-page span {
