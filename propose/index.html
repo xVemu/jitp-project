@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
+    <title>Zaproponuj układ - układy klawiatury</title>
+    <link rel="stylesheet" href="../main.css">
+    <!-- <link rel="stylesheet" href="../material-components-web.min.css"> -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a id="home-page" href="../">
+            <div id="logo"></div>
+            <span>Strona główna</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../dvorak/">DVORAK</a></li>
+                <li><a href="../colemak/">COLEMAK</a></li>
+                <li><a href="../qwerty/">QWERTY</a></li>
+                <li><a href="../propose/">Zaproponuj układ<div id="underline"></div></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <form action="https://vemu.ddns.net:8080/api/keyboard" method="post">
+            <label class="mdc-text-field mdc-text-field--filled">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-floating-label" id="my-label-id">Nazwa</span>
+                <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id"
+                    aria-controls="my-helper-id" aria-describedby="my-helper-id">
+                <span class="mdc-line-ripple"></span>
+            </label>
+            <div class="mdc-text-field-helper-line">
+                <div class="mdc-text-field-helper-text" id="my-helper-id" aria-hidden="true">helper text</div>
+            </div>
+        </form>
+        <!-- <form action="" method="post">
+            <input type="text" name="name" id="name">
+        </form> -->
+
+    </div>
+    <footer>
+        <span>&#169; 2021 Kamil Kras</span>
+        <a href="https://github.com/xVemu" target="blank"><img src="../img/github.svg"></a>
+        <a href="mailto:k.kras.tig19@zsme.tarnow.pl">Kontakt</a>
+        <a href="https://github.com/xVemu/jitp-project/blob/master/LICENSE" target="blank">Licencja</a>
+    </footer>
+</body>
+
+</html>

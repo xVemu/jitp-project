@@ -1,0 +1,14 @@
+#container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.mdc-text-field__input {
+    border-bottom: 1px solid var(--on-surface);
+}
+
+.mdc-text-field__ripple {
+    background-color: var(--elevation1dp);
+}

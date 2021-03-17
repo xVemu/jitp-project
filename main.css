@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Material+Icons+Round);
 :root {
     --surface: #121212;
     --elevation0dp: var(--surface);
@@ -14,6 +16,8 @@
     --primary-light: #ffffb3;
     --primary-dark: #caae53;
     --error: #CF6679;
+    --on-surface: #FFF;
+    --on-primary: #000;
     --inactive: rgba(255, 224, 130, 0.38);
 }
 
@@ -41,7 +45,7 @@
     box-sizing: border-box;
 }
 
-/* Outline on focus change color */
+/* TODO Outline on focus change color */
 
 a:link, a:visited {
     text-decoration: none;
@@ -57,11 +61,12 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 #container {
     margin-top: 72px;
-    width: 100%;
 }
 
 footer, header {
@@ -72,7 +77,7 @@ footer, header {
     align-items: center;
 }
 
-/* Mobile navigation drawer */
+/* TODO Mobile navigation drawer */
 
 header {
     position: fixed;
@@ -170,4 +175,58 @@ footer>* {
     nav ul li a:hover #underline {
         background-color: var(--primary);
     }
+}
+
+/* gallery-item */
+
+.gallery-item {
+    border-radius: 6px;
+    background-color: var(--elevation1dp);
+    text-align: center;
+    color: var(--on-primary);
+    font-size: 0;
+    width: 50%;
+    display: flex;
+}
+
+.description {
+    padding: 8px;
+}
+
+.description>p {
+    margin: 0;
+    font-size: medium;
+    color: var(--on-surface);
+    text-align: left;
+}
+
+.description p:first-child {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    font-size: large;
+    border-bottom: #FFF 1px solid;
+}
+
+.keyboard-layout {
+    background-color: var(--elevation2dp);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.keyboard-layout p {
+    white-space: nowrap;
+    margin: 8px 8px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.keyboard-layout p span {
+    border-radius: 6px;
+    background-color: var(--primary);
+}
+
+.keyboard-layout p span {
+    font-size: medium;
+    padding: 4px 8px;
+    margin: 0 2px;
 }
