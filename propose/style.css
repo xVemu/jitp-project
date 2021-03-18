@@ -5,10 +5,39 @@
     align-items: center;
 }
 
-.mdc-text-field__input {
-    border-bottom: 1px solid var(--on-surface);
+.text-field {
+    display: flex;
+    flex-direction: column;
 }
 
-.mdc-text-field__ripple {
+.text-field p {
+    padding-left: 16px;
+    font-size: .75rem;
+    color: rgba(255, 255, 255, .6);
+    margin: 0;
+    line-height: 18px;
+    display: block;
+}
+
+.input-text-field {
+    color: rgba(255, 255, 255, .6);
+    position: relative;
+}
+
+.input-text-field input {
     background-color: var(--elevation1dp);
+    height: 56px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.input-text-field label {
+    left: 16px;
+    right: initial;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    position: absolute;
 }

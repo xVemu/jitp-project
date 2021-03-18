@@ -21,7 +21,7 @@
     --inactive: rgba(255, 224, 130, 0.38);
 }
 
-.material-icons-round.md-18 {
+/* .material-icons-round.md-18 {
     font-size: 18px;
 }
 
@@ -35,7 +35,7 @@
 
 .material-icons-round.md-48 {
     font-size: 48px;
-}
+} */
 
 .material-icons-round {
     color: var(--primary);

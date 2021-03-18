@@ -29,7 +29,17 @@
     </header>
     <div id="container">
         <form action="https://vemu.ddns.net:8080/api/keyboard" method="post">
-            <label class="mdc-text-field mdc-text-field--filled">
+            <div class="text-field">
+                <div class="input-text-field">
+                    <input type="text" id="name">
+                    <label for="name">Nazwa</label>
+                </div>
+                <p>
+                    Helper messege
+                </p>
+            </div>
+
+            <!-- <label class="mdc-text-field mdc-text-field--filled">
                 <span class="mdc-text-field__ripple"></span>
                 <span class="mdc-floating-label" id="my-label-id">Nazwa</span>
                 <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id"
@@ -38,7 +48,7 @@
             </label>
             <div class="mdc-text-field-helper-line">
                 <div class="mdc-text-field-helper-text" id="my-helper-id" aria-hidden="true">helper text</div>
-            </div>
+            </div> -->
         </form>
         <!-- <form action="" method="post">
             <input type="text" name="name" id="name">
