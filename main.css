@@ -145,11 +145,27 @@ nav ul li a {
 
 footer {
     justify-content: center;
-    color: var(--primary)
+    color: var(--primary);
+}
+
+#github {
+    background-color: var(--primary);
+    -webkit-mask: url(img/github.svg) no-repeat center;
+    mask: url(img/github.svg) no-repeat center;
+    width: 24px;
+    height: 24px;
 }
 
 footer>* {
     padding: 0 8px;
+}
+
+footer a:hover {
+    color: var(--primary-light);
+}
+
+footer a:hover #github {
+    background-color: var(--primary-light);
 }
 
 @media (min-width: 640px) {
@@ -229,4 +245,23 @@ footer>* {
     font-size: medium;
     padding: 4px 8px;
     margin: 0 2px;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--elevation4dp);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-dark);
+    border-radius: .25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
 }

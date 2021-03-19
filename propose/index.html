@@ -31,33 +31,21 @@
         <form action="https://vemu.ddns.net:8080/api/keyboard" method="post">
             <div class="text-field">
                 <div class="input-text-field">
-                    <input type="text" id="name">
+                    <input required type="text" autocomplete="off" spellcheck="false" id="name">
                     <label for="name">Nazwa</label>
                 </div>
                 <p>
-                    Helper messege
+                    *Wymagane
                 </p>
             </div>
-
-            <!-- <label class="mdc-text-field mdc-text-field--filled">
-                <span class="mdc-text-field__ripple"></span>
-                <span class="mdc-floating-label" id="my-label-id">Nazwa</span>
-                <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id"
-                    aria-controls="my-helper-id" aria-describedby="my-helper-id">
-                <span class="mdc-line-ripple"></span>
-            </label>
-            <div class="mdc-text-field-helper-line">
-                <div class="mdc-text-field-helper-text" id="my-helper-id" aria-hidden="true">helper text</div>
-            </div> -->
         </form>
-        <!-- <form action="" method="post">
-            <input type="text" name="name" id="name">
-        </form> -->
 
     </div>
     <footer>
         <span>&#169; 2021 Kamil Kras</span>
-        <a href="https://github.com/xVemu" target="blank"><img src="../img/github.svg"></a>
+        <a href="https://github.com/xVemu" target="blank">
+            <div id="github"></div>
+        </a>
         <a href="mailto:k.kras.tig19@zsme.tarnow.pl">Kontakt</a>
         <a href="https://github.com/xVemu/jitp-project/blob/master/LICENSE" target="blank">Licencja</a>
     </footer>
