@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Mono&display=swap');
 @import url(https://fonts.googleapis.com/css2?family=Material+Icons+Round);
 :root {
     --surface: #121212;
@@ -17,8 +17,17 @@
     --primary-dark: #caae53;
     --error: #CF6679;
     --on-surface: #FFF;
+    --high-white: rgba(255, 255, 255, .87);
+    --medium-white: rgba(255, 255, 255, .60);
+    --disabled-white: rgba(255, 255, 255, .38);
     --on-primary: #000;
-    --inactive: rgba(255, 224, 130, 0.38);
+    --hovered-color: rgba(255, 255, 255, .04);
+    --hovered: .04;
+    --focused-color: rgba(255, 255, 255, .12);
+    --focused: .12;
+    --activated-color: rgba(255, 255, 255, .24);
+    --activated: .24;
+    --inactive: rgba(255, 224, 130, .38);
 }
 
 /* .material-icons-round.md-18 {
@@ -67,6 +76,7 @@ body {
 
 #container {
     margin-top: 72px;
+    height: 100%;
 }
 
 footer, header {

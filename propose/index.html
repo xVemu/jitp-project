@@ -28,61 +28,84 @@
         </nav>
     </header>
     <div id="container">
-        <form action="https://vemu.ddns.net:8080/api/keyboard" method="post">
-            <div class="text-field-container">
-                <div class="input-text-field">
-                    <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input">
-                    <div class="name-bot"></div>
-                    <label for="name">Nazwa</label>
-                </div>
-                <p>
-                    *Wymagane
-                </p>
-            </div>
-            <h1>Typ:</h1>
-            <div class="radio-container">
-                <div class="radio-layout">
-                    <input class="radio" type="radio" id="radio-colemak" name="type" checked>
-                    <div class="radio-background">
-                        <div class="radio-outer"></div>
-                        <div class="radio-inner"></div>
+        <form action="" method="post">
+            <!-- action="https://vemu.ddns.net:8080/api/keyboard" -->
+            <div class="text-fields">
+                <div class="text-field-container">
+                    <div class="input-text-field">
+                        <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input">
+                        <div class="name-bot"></div>
+                        <label for="name">Nazwa</label>
                     </div>
-                    <div class="radio-hover"></div>
+                    <p>
+                        *Wymagane
+                    </p>
                 </div>
-                <label for="radio-colemak">Colemak</label>
-            </div>
-            <div class="radio-container">
-                <div class="radio-layout">
-                    <input class="radio" type="radio" id="radio-dvorak" name="type">
-                    <div class="radio-background">
-                        <div class="radio-outer"></div>
-                        <div class="radio-inner"></div>
+                <div class="text-field-container">
+                    <div class="input-text-field">
+                        <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input">
+                        <div class="name-bot"></div>
+                        <label for="name">E-mail</label>
                     </div>
-                    <div class="radio-hover"></div>
                 </div>
-                <label for="radio-colemak">Dvorak</label>
             </div>
-            <div class="radio-container">
-                <div class="radio-layout">
-                    <input class="radio" type="radio" id="radio-qwerty" name="type">
-                    <div class="radio-background">
-                        <div class="radio-outer"></div>
-                        <div class="radio-inner"></div>
+            <div class="radios">
+                <p>Typ:</p>
+                <div class="radio-container">
+                    <div class="radio-layout">
+                        <input class="radio" type="radio" id="radio-colemak" name="type" checked>
+                        <div class="radio-background">
+                            <div class="radio-outer"></div>
+                            <div class="radio-inner"></div>
+                        </div>
+                        <div class="radio-hover"></div>
                     </div>
-                    <div class="radio-hover"></div>
+                    <label for="radio-colemak">Colemak</label>
                 </div>
-                <label for="radio-qwerty">Qwerty</label>
+                <div class="radio-container">
+                    <div class="radio-layout">
+                        <input class="radio" type="radio" id="radio-dvorak" name="type">
+                        <div class="radio-background">
+                            <div class="radio-outer"></div>
+                            <div class="radio-inner"></div>
+                        </div>
+                        <div class="radio-hover"></div>
+                    </div>
+                    <label for="radio-dvorak">Dvorak</label>
+                </div>
+                <div class="radio-container">
+                    <div class="radio-layout">
+                        <input class="radio" type="radio" id="radio-qwerty" name="type">
+                        <div class="radio-background">
+                            <div class="radio-outer"></div>
+                            <div class="radio-inner"></div>
+                        </div>
+                        <div class="radio-hover"></div>
+                    </div>
+                    <label for="radio-qwerty">Qwerty</label>
+                </div>
+                <div class="radio-container">
+                    <div class="radio-layout">
+                        <input class="radio" type="radio" id="radio-other" name="type">
+                        <div class="radio-background">
+                            <div class="radio-outer"></div>
+                            <div class="radio-inner"></div>
+                        </div>
+                        <div class="radio-hover"></div>
+                    </div>
+                    <label for="radio-other">Inny</label>
+                </div>
             </div>
-            <div class="radio-container">
-                <div class="radio-layout">
-                    <input class="radio" type="radio" id="radio-other" name="type">
-                    <div class="radio-background">
-                        <div class="radio-outer"></div>
-                        <div class="radio-inner"></div>
-                    </div>
-                    <div class="radio-hover"></div>
-                </div>
-                <label for="radio-other">Inny</label>
+            <div class="buttons">
+                <button type="reset" class="button-outline">
+                    <span>wyczyść</span>
+                    <div class="button-hover"></div>
+                </button>
+                <button type="submit" class="button-filled">
+                    <i class="material-icons-round">send</i>
+                    <span>wyślij</span>
+                    <div class="button-hover"></div>
+                </button>
             </div>
         </form>
 
