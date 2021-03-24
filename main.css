@@ -28,6 +28,7 @@
     --activated-color: rgba(255, 255, 255, .24);
     --activated: .24;
     --inactive: rgba(255, 224, 130, .38);
+    --divider: rgba(255, 255, 255, 20%);
 }
 
 /* .material-icons-round.md-18 {
@@ -206,7 +207,8 @@ footer a:hover #github {
 /* gallery-item */
 
 .gallery-item {
-    border-radius: 6px;
+    margin: 8px;
+    border-radius: 0 4px 4px;
     background-color: var(--elevation1dp);
     text-align: center;
     color: var(--on-primary);
@@ -222,7 +224,7 @@ footer a:hover #github {
 .description>p {
     margin: 0;
     font-size: medium;
-    color: var(--on-surface);
+    color: var(--high-white);
     text-align: left;
 }
 
@@ -230,7 +232,7 @@ footer a:hover #github {
     padding-bottom: 8px;
     margin-bottom: 8px;
     font-size: large;
-    border-bottom: #FFF 1px solid;
+    border-bottom: var(--divider) 1px solid;
 }
 
 .keyboard-layout {
@@ -238,20 +240,18 @@ footer a:hover #github {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 4px 0 0 4px;
+    font-family: 'Roboto Mono', monospace;
+    white-space: nowrap;
 }
 
 .keyboard-layout p {
-    white-space: nowrap;
-    margin: 8px 8px;
-    font-family: 'Roboto Mono', monospace;
+    margin: 8px;
 }
 
 .keyboard-layout p span {
     border-radius: 6px;
     background-color: var(--primary);
-}
-
-.keyboard-layout p span {
     font-size: medium;
     padding: 4px 8px;
     margin: 0 2px;
