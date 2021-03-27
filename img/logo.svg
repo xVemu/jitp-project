@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit Wersja próbna) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="86.6986mm" height="86.6986mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8669.86 8669.86"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="652" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Roboto">
+		<font-face-src>
+			<font-face-name name="Roboto"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="W" horiz-adv-x="887" d="M235.834 224.167l13.6663 -93.8359 19.9983 84.503 140.666 496.165 79.1675 0 137.169 -496.165 19.4972 -85.8355 15.1695 95.6695 110.332 486.331 94.1662 0 -172.332 -710.998 -85.4995 0 -146.337 518.168 -11.3316 54.1639 -11.1665 -54.1639 -151.832 -518.168 -85.4995 0 -171.836 710.998 93.6651 0 112.337 -486.832z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Roboto";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke:white;stroke-width:84.67;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:white}
+    .fnt0 {font-weight:normal;font-size:1756.15px;font-family:'Roboto'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1728255864352">
+   <path class="fil0 str0" d="M8610.58 5887.87l-4369.1 1843.73 -4182.21 -2424.55 1045.58 -3141.42c1012.3,-196.49 1990.68,-551.32 2900.21,-1227.37l3090.19 1618.11 1367.24 3002.96 148.09 328.54z"/>
+   <path class="fil0 str0" d="M4243.81 7731.41c0,-1286.16 0,-2572.33 0,-3858.49 1216.74,137.55 3176.48,-890.16 2851.44,-1316.55"/>
+   <line class="fil0 str0" x1="4243.81" y1="3872.92" x2="1104.85" y2= "2165.63" />
+   <g transform="matrix(1.23634 -0.605092 1.0707 0.6987 -6140.24 2937.57)">
+    <text x="4334.93" y="4334.93"  class="fil1 fnt0">W</text>
+   </g>
+  </g>
+ </g>
+</svg>

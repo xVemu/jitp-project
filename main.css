@@ -146,11 +146,11 @@ nav ul li a {
 }
 
 #logo {
-    background-image: url(img/logo.png);
+    background-image: url(img/logo.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 32px;
-    width: 32px;
+    height: 48px;
+    width: 48px;
     margin-right: 16px;
 }
 
