@@ -31,22 +31,6 @@
     --divider: rgba(255, 255, 255, 20%);
 }
 
-/* .material-icons-round.md-18 {
-    font-size: 18px;
-}
-
-.material-icons-round.md-24 {
-    font-size: 24px;
-}
-
-.material-icons-round.md-36 {
-    font-size: 36px;
-}
-
-.material-icons-round.md-48 {
-    font-size: 48px;
-} */
-
 .material-icons-round {
     color: var(--primary);
 }
@@ -55,11 +39,82 @@
     box-sizing: border-box;
 }
 
+h1, h2 {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 6rem;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 3.75rem;
+    letter-spacing: -.5px;
+}
+
+h3, h4, h5 {
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.125rem;
+    letter-spacing: .25px;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: .15px;
+}
+
+.subtitle-1 {
+    letter-spacing: .15px;
+}
+
+.subtitle-2 {
+    font-weight: 500;
+    font-size: .875rem;
+    letter-spacing: .1px;
+}
+
+.body-1 {
+    letter-spacing: .5px;
+}
+
+.body-2 {
+    font-size: .875rem;
+    letter-spacing: .25px;
+}
+
+.button-text {
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 1.25px;
+}
+
+.caption {
+    font-size: .75rem;
+    letter-spacing: .4px;
+}
+
 /* TODO Outline on focus change color */
 
 a:link, a:visited {
     text-decoration: none;
     color: var(--primary);
+}
+
+a:hover {
+    color: var(--primary-light);
 }
 
 body {
@@ -77,12 +132,16 @@ body {
 
 #container {
     margin-top: 72px;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
 }
 
 footer, header {
+    flex-basis: 72px;
     background-color: var(--elevation4dp);
-    height: 72px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -98,6 +157,7 @@ header {
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
+    z-index: 99;
 }
 
 nav {
@@ -212,7 +272,6 @@ footer a:hover #github {
     background-color: var(--elevation1dp);
     text-align: center;
     color: var(--on-primary);
-    font-size: 0;
     width: 50%;
     display: flex;
 }
@@ -221,9 +280,8 @@ footer a:hover #github {
     padding: 8px;
 }
 
-.description>p {
+.description p {
     margin: 0;
-    font-size: medium;
     color: var(--high-white);
     text-align: left;
 }
@@ -231,7 +289,6 @@ footer a:hover #github {
 .description p:first-child {
     padding-bottom: 8px;
     margin-bottom: 8px;
-    font-size: large;
     border-bottom: var(--divider) 1px solid;
 }
 
@@ -243,6 +300,7 @@ footer a:hover #github {
     border-radius: 4px 0 0 4px;
     font-family: 'Roboto Mono', monospace;
     white-space: nowrap;
+    font-size: 0;
 }
 
 .keyboard-layout p {

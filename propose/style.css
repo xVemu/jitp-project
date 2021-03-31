@@ -1,15 +1,8 @@
-#container {
+form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* TODO delete */
-}
-
-.text-fields, .radios {
-    display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
+    margin: 48px 0;
 }
 
 /* .text-field */
@@ -17,15 +10,13 @@
 .text-field-container {
     display: flex;
     flex-direction: column;
-    flex-basis: 48%;
+    color: var(--medium-white);
+    line-height: 18px;
 }
 
 .text-field-container p {
     padding-left: 16px;
-    font-size: .75rem;
-    color: var(--medium-white);
     margin: 2px 0 0;
-    line-height: 18px;
     display: block;
 }
 
@@ -78,7 +69,6 @@
 
 .input-text-field label {
     left: 16px;
-    right: initial;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
@@ -102,11 +92,18 @@
 
 /* radio */
 
+.radios {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .radio-container {
     display: inline-flex;
     color: var(--on-surface);
     margin: 0 8px;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .radio-layout {
@@ -115,12 +112,10 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    will-change: opacity;
 }
 
 .radio-container label {
     padding-left: 4px;
-    text-transform: uppercase;
 }
 
 .radio {
@@ -181,14 +176,6 @@
     opacity: 0;
 }
 
-.radios p {
-    text-transform: uppercase;
-    font-size: 20px;
-    margin: 0;
-    line-height: 40px;
-    height: 40px;
-}
-
 /* buttons */
 
 .buttons {
@@ -214,12 +201,6 @@ button {
 .button-outline {
     background-color: transparent;
     color: var(--primary);
-}
-
-button span {
-    font-size: .875rem;
-    font-weight: 500;
-    letter-spacing: .09rem;
 }
 
 .button-hover {
@@ -292,22 +273,147 @@ button:active>.button-hover {
     margin: 8px;
 }
 
-/* TODO padding not working */
-
 .keyboard-form p input {
+    box-sizing: content-box;
     width: 1rem;
+    border: none;
     border-radius: 6px;
     background-color: var(--primary);
-    padding: 4px 8px;
+    padding: 6px 4px;
+    text-align: center;
     margin: 0 2px;
     font-size: medium;
     color: var(--on-primary);
 }
 
+/* switch */
+
+.switch-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    flex-basis: 50%;
+}
+
+.switch-label {
+    flex-basis: 50%;
+}
+
+.switch-container .text-field-container {
+    flex-basis: 100%;
+}
+
+.track {
+    background-color: var(--on-surface);
+    border-color: var(--on-surface);
+    opacity: .38;
+    width: 32px;
+    height: 14px;
+    border: 1px solid;
+    border-radius: 7px;
+    position: absolute;
+    right: 0;
+    transition: opacity 90ms cubic-bezier(.4, 0, .2, 1), background-color 90ms cubic-bezier(.4, 0, .2, 1), border-color 90ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.switch-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0);
+    transition: transform 90ms cubic-bezier(.4, 0, .2, 1), background-color 90ms cubic-bezier(.4, 0, .2, 1), border-color 90ms cubic-bezier(.4, 0, .2, 1);
+    position: absolute;
+    right: 2px;
+    top: -17px;
+    width: 48px;
+    height: 48px;
+}
+
+.switch-circle-inner {
+    border: 10px solid;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.switch-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--on-surface);
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.switch-input {
+    position: absolute;
+    right: 2px;
+    top: -17px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 68px;
+    height: 48px;
+    z-index: 1;
+}
+
+.switch-input:checked~.switch .switch-circle::before {
+    background-color: var(--primary);
+}
+
+.switch-input:checked~.switch .track, .switch-input:checked~.switch .switch-circle-inner {
+    background-color: var(--primary);
+    border-color: var(--primary)
+}
+
+.switch-input:checked~.switch .track {
+    opacity: .54;
+}
+
+.switch-input:checked~.switch .switch-circle {
+    transform: translateX(20px);
+}
+
+.switch-input:hover~.switch .switch-circle::before {
+    opacity: var(--hovered);
+}
+
+.switch-input:focus~.switch .switch-circle::before {
+    opacity: var(--focused);
+}
+
+.switch-input:not(:checked)~.text-field-container .input-text-field {
+    pointer-events: none;
+    background-color: #171717;
+    color: rgba(255, 255, 255, .38);
+}
+
+.switch-input:not(:checked)~.text-field-container:hover {
+    cursor: not-allowed;
+}
+
+.switch-input:not(:checked)~.text-field-container:hover {
+    cursor: not-allowed;
+}
+
+.switch-input:not(:checked)~.text-field-container .text-input {
+    border-bottom-color: rgba(255, 255, 255, .06);
+}
+
+.switch-input:not(:checked)~.text-field-container .caption, .switch-input:not(:checked)~.text-field-container .text-input {
+    color: rgba(255, 255, 255, .38);
+}
+
 /* on pc */
 
-@media (min-width: 640px) {
-    .text-fields, .radios {
-        flex-direction: row;
-    }
-}
+@media (min-width: 640px) {}

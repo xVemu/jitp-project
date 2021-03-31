@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
     <title>Zaproponuj układ - układy klawiatury</title>
     <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../material-components-web.min.css">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,6 +18,7 @@
         </a>
         <nav>
             <ul>
+                <li><a href="../gallery/">Wszystkie</a></li>
                 <li><a href="../dvorak/">DVORAK</a></li>
                 <li><a href="../colemak/">COLEMAK</a></li>
                 <li><a href="../qwerty/">QWERTY</a></li>
@@ -30,27 +29,18 @@
     <div id="container">
         <form action="" method="post">
             <!-- TODO action="https://vemu.ddns.net:8080/api/keyboard" -->
-            <div class="text-fields">
-                <div class="text-field-container">
-                    <div class="input-text-field">
-                        <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input">
-                        <div class="name-bot"></div>
-                        <label for="name">Nazwa</label>
-                    </div>
-                    <p>
-                        *Wymagane
-                    </p>
+            <div class="text-field-container">
+                <div class="input-text-field">
+                    <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input">
+                    <div class="name-bot"></div>
+                    <label for="name" class="subtitle-1">Nazwa*</label>
                 </div>
-                <div class="text-field-container">
-                    <div class="input-text-field">
-                        <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input">
-                        <div class="name-bot"></div>
-                        <label for="name">E-mail</label>
-                    </div>
-                </div>
+                <p class="caption">
+                    *Wymagane
+                </p>
             </div>
             <div class="radios">
-                <p>Typ:</p>
+                <span class="subtitle-2">Typ</span>
                 <div class="radio-container">
                     <div class="radio-layout">
                         <input class="radio" type="radio" id="radio-colemak" name="type" checked>
@@ -60,7 +50,7 @@
                         </div>
                         <div class="radio-hover"></div>
                     </div>
-                    <label for="radio-colemak">Colemak</label>
+                    <label for="radio-colemak" class="body-2">Colemak</label>
                 </div>
                 <div class="radio-container">
                     <div class="radio-layout">
@@ -71,7 +61,7 @@
                         </div>
                         <div class="radio-hover"></div>
                     </div>
-                    <label for="radio-dvorak">Dvorak</label>
+                    <label for="radio-dvorak" class="body-2">Dvorak</label>
                 </div>
                 <div class="radio-container">
                     <div class="radio-layout">
@@ -82,7 +72,7 @@
                         </div>
                         <div class="radio-hover"></div>
                     </div>
-                    <label for="radio-qwerty">Qwerty</label>
+                    <label for="radio-qwerty" class="body-2">Qwerty</label>
                 </div>
                 <div class="radio-container">
                     <div class="radio-layout">
@@ -93,20 +83,10 @@
                         </div>
                         <div class="radio-hover"></div>
                     </div>
-                    <label for="radio-other">Inny</label>
+                    <label for="radio-other" class="body-2">Inny</label>
                 </div>
             </div>
-            <div class="buttons">
-                <button type="reset" class="button-outline">
-                    <span>wyczyść</span>
-                    <div class="button-hover"></div>
-                </button>
-                <button type="submit" class="button-filled">
-                    <i class="material-icons-round">send</i>
-                    <span>wyślij</span>
-                    <div class="button-hover"></div>
-                </button>
-            </div>
+            <h6>Uzupełnij układ</h6>
             <div class="keyboard-form">
                 <p>
                     <input type="text">
@@ -149,8 +129,38 @@
                     <input type="text">
                 </p>
             </div>
+            <div class="switch-container">
+                <label for="inform" class="switch-label subtitle-1">Poinformuj mnie</label>
+                <input type="checkbox" name="inform" id="inform" class="switch-input">
+                <div class="switch">
+                    <div class="track"></div>
+                    <div class="switch-circle">
+                        <div class="switch-circle-inner"></div>
+                    </div>
+                </div>
+                <div class="text-field-container">
+                    <div class="input-text-field">
+                        <input required type="email" autocomplete="off" spellcheck="false" id="name" class="text-input">
+                        <div class="name-bot"></div>
+                        <label for="name" class="subtitle-1">E-mail*</label>
+                    </div>
+                    <p class="caption">
+                        *Wymagane
+                    </p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="reset" class="button-outline">
+                    <span class="button-text">wyczyść</span>
+                    <div class="button-hover"></div>
+                </button>
+                <button type="submit" class="button-filled">
+                    <i class="material-icons-round">send</i>
+                    <span class="button-text">wyślij</span>
+                    <div class="button-hover"></div>
+                </button>
+            </div>
         </form>
-
     </div>
     <footer>
         <span>&#169; 2021 Kamil Kras</span>
