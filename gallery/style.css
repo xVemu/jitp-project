@@ -1,0 +1,49 @@
+#container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h6 {
+    color: var(--high-white);
+    margin: 0;
+}
+
+/* TODO .keyboard-layout p margin left and right same as up and down */
+
+.gallery-layout {
+    border-radius: 4px;
+    background-color: var(--elevation1dp);
+    color: var(--on-primary);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.keyboard-layout {
+    align-items: center;
+    margin-top: 16px;
+}
+
+.gallery-text {
+    padding: 16px;
+}
+
+.overline {
+    color: var(--primary);
+}
+
+.gallery-layout::before {
+    content: '';
+    position: absolute;
+    background-color: var(--on-surface);
+    opacity: 0;
+    transition: opacity 15ms linear;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-layout:hover::before {
+    opacity: var(--hovered);
+}

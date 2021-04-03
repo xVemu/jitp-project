@@ -117,6 +117,13 @@ h6 {
     letter-spacing: .4px;
 }
 
+.overline {
+    font-size: .625rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 2rem;
+}
+
 a:link, a:visited {
     text-decoration: none;
     color: var(--primary);
@@ -400,7 +407,6 @@ footer a:hover #github {
     background-color: var(--elevation1dp);
     text-align: center;
     color: var(--on-primary);
-    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -422,7 +428,6 @@ footer a:hover #github {
 }
 
 .keyboard-layout {
-    background-color: var(--elevation2dp);
     display: flex;
     flex-direction: column;
     justify-content: center;
