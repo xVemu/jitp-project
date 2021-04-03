@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Mono&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Material+Icons+Round);
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Round');
 :root {
     --surface: #121212;
     --elevation0dp: var(--surface);
@@ -29,6 +29,7 @@
     --activated: .24;
     --inactive: rgba(255, 224, 130, .38);
     --divider: rgba(255, 255, 255, 20%);
+    --animation: cubic-bezier(.4, 0, .2, 1);
 }
 
 .material-icons-round {
@@ -45,11 +46,13 @@ h1, h2 {
 
 h1 {
     font-size: 6rem;
+    line-height: 6rem;
     letter-spacing: -1.5px;
 }
 
 h2 {
     font-size: 3.75rem;
+    line-height: 3.75rem;
     letter-spacing: -.5px;
 }
 
@@ -59,39 +62,47 @@ h3, h4, h5 {
 
 h3 {
     font-size: 3rem;
+    line-height: 3.125rem;
 }
 
 h4 {
     font-size: 2.125rem;
+    line-height: 2.5rem;
     letter-spacing: .25px;
 }
 
 h5 {
     font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 h6 {
     font-weight: 500;
     font-size: 1.25rem;
+    line-height: 2rem;
     letter-spacing: .15px;
 }
 
 .subtitle-1 {
     letter-spacing: .15px;
+    line-height: 1.75rem;
 }
 
 .subtitle-2 {
     font-weight: 500;
     font-size: .875rem;
+    line-height: 1.375rem;
     letter-spacing: .1px;
 }
 
 .body-1 {
     letter-spacing: .5px;
+    line-height: 1.5rem;
 }
 
 .body-2 {
     font-size: .875rem;
+    line-height: 1.25rem;
     letter-spacing: .25px;
 }
 
@@ -105,8 +116,6 @@ h6 {
     font-size: .75rem;
     letter-spacing: .4px;
 }
-
-/* TODO Outline on focus change color */
 
 a:link, a:visited {
     text-decoration: none;
@@ -145,64 +154,209 @@ footer, header {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-/* TODO Mobile navigation drawer */
-
-header {
-    position: fixed;
-    margin: auto;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-transform: uppercase;
-    z-index: 99;
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        z-index: 99;
+        height: 72px;
+    }
+    header>* {
+        flex: 1;
+    }
+    nav {
+        height: 100%;
+    }
+    #nav {
+        width: 256px;
+        top: 72px;
+        left: -256px;
+        bottom: 0px;
+        margin: 0;
+        padding: 8px 0px;
+        position: fixed;
+        background-color: var(--elevation16dp);
+        list-style-type: none;
+        transition: transform .25s var(--animation);
+        z-index: 98;
+        border-right: 1px solid var(--focused-color);
+    }
+    #nav li {
+        height: 40px;
+        padding: 0 8px;
+        margin: 8px;
+        position: relative;
+    }
+    #nav li a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--on-surface);
+        transition: opacity 150ms linear;
+        opacity: 0;
+        border-radius: 4px;
+    }
+    #nav-button {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        position: absolute;
+        top: 12px;
+        opacity: 0;
+        z-index: 1;
+        margin-left: 8px;
+    }
+    #hamburger {
+        position: relative;
+        top: 34px;
+        margin-left: 8px;
+    }
+    #hamburger, #hamburger::before, #hamburger::after {
+        height: 4px;
+        width: 48px;
+        background-color: var(--on-surface);
+        transition: transform .25s var(--animation);
+    }
+    #hamburger::before {
+        content: '';
+        position: absolute;
+        top: -13px;
+    }
+    #hamburger::after {
+        content: '';
+        position: absolute;
+        top: 13px;
+    }
+    #nav li a {
+        line-height: 40px;
+        color: var(--high-white);
+    }
+    #nav li a:hover::before {
+        opacity: var(--hovered);
+    }
+    #nav li a:focus::before {
+        opacity: var(--focused);
+    }
+    #nav-button:checked~#nav {
+        transform: translateX(256px);
+    }
+    #nav-button:checked~#scrim {
+        opacity: 1;
+    }
+    #nav-button:checked+#hamburger {
+        background-color: transparent;
+    }
+    #nav-button:checked+#hamburger::before {
+        transform: translateY(13px) rotate(45deg);
+    }
+    #nav-button:checked+#hamburger::after {
+        transform: translateY(-13px) rotate(-45deg);
+    }
+    #nav a[href=""] {
+        color: var(--primary);
+    }
+    #nav a[href=""]::before {
+        background-color: var(--primary);
+        opacity: var(--focused);
+    }
+    #home-page {
+        order: 1;
+    }
+    #home-page span {
+        display: none;
+    }
+    #right {
+        order: 2;
+    }
+    #logo {
+        margin: 0 auto;
+    }
+    #scrim {
+        opacity: 0;
+        background-color: rgba(255, 255, 255, .32);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 72px;
+        transition: opacity .25s var(--animation);
+    }
 }
 
-nav {
-    margin-left: auto;
-    height: 72px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-    align-content: center;
-    line-height: 72px;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 0 4px;
-}
-
-#underline {
-    height: 8px;
-    background-color: var(--primary);
-    position: absolute;
-    left: 4px;
-    right: 4px;
-    bottom: 0;
-}
-
-#home-page {
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    margin-left: 24px;
-    text-decoration: none;
-    height: 72px;
-}
-
-#home-page span {
-    display: none;
+@media (min-width: 768px) {
+    #nav .subtitle-2, #home-page span {
+        font-weight: normal;
+        font-size: medium;
+        letter-spacing: .15px;
+    }
+    header {
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        z-index: 99;
+    }
+    nav {
+        margin-left: auto;
+        height: 72px;
+    }
+    #nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    #nav li {
+        display: inline-block;
+        align-content: center;
+        line-height: 72px;
+    }
+    #nav li a {
+        display: inline-block;
+        padding: 0 8px;
+        position: relative;
+    }
+    a[href=""]::after {
+        content: '';
+        height: 8px;
+        background-color: var(--primary);
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        bottom: 0;
+    }
+    #home-page {
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        margin-left: 24px;
+        text-decoration: none;
+        height: 72px;
+        color: var(--primary);
+    }
+    #nav-button, #hamburger, #scrim, #right, #nav li:first-child {
+        display: none;
+    }
+    #logo {
+        margin-right: 16px;
+    }
+    #nav:hover li a {
+        color: var(--inactive);
+    }
+    #nav:hover a[href=""]::after {
+        background-color: var(--inactive);
+    }
+    #nav li a:hover {
+        color: var(--primary);
+    }
+    #nav a[href=""]:hover::after {
+        background-color: var(--primary);
+    }
 }
 
 #logo {
@@ -211,7 +365,6 @@ nav ul li a {
     background-repeat: no-repeat;
     height: 48px;
     width: 48px;
-    margin-right: 16px;
 }
 
 footer {
@@ -239,31 +392,6 @@ footer a:hover #github {
     background-color: var(--primary-light);
 }
 
-@media (min-width: 640px) {
-    #underline {
-        left: 8px;
-        right: 8px;
-    }
-    nav ul li a {
-        padding: 0 8px;
-    }
-    #home-page span {
-        display: inline-block;
-    }
-    nav ul:hover li a {
-        color: var(--inactive);
-    }
-    nav ul:hover li #underline {
-        background-color: var(--inactive);
-    }
-    nav ul li a:hover {
-        color: var(--primary);
-    }
-    nav ul li a:hover #underline {
-        background-color: var(--primary);
-    }
-}
-
 /* gallery-item */
 
 .gallery-item {
@@ -272,8 +400,9 @@ footer a:hover #github {
     background-color: var(--elevation1dp);
     text-align: center;
     color: var(--on-primary);
-    width: 50%;
+    max-width: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 .description {
@@ -311,8 +440,42 @@ footer a:hover #github {
     border-radius: 6px;
     background-color: var(--primary);
     font-size: medium;
-    padding: 4px 8px;
+    padding: 2px 6px;
     margin: 0 2px;
+}
+
+@media (min-width: 640px) {
+    .gallery-item {
+        width: 90%;
+    }
+    .keyboard-layout p span {
+        padding: 4px 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery-item {
+        width: 80%;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-item {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .gallery-item {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1536px) {
+    .gallery-item {
+        width: 50%;
+    }
 }
 
 /* scrollbar */

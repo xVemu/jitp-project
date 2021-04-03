@@ -16,17 +16,19 @@
             <span>Strona główna</span>
         </a>
         <nav>
-            <ul>
-                <li><a href="../gallery/">Wszystkie</a></li>
-                <li><a href="../dvorak/">
-                        DVORAK
-                        <div id="underline"></div>
-                    </a></li>
-                <li><a href="../colemak/">COLEMAK</a></li>
-                <li><a href="../qwerty/">QWERTY</a></li>
-                <li><a href="../propose/">Zaproponuj układ</a></li>
+            <input type="checkbox" name="nav-button" id="nav-button">
+            <div id="hamburger"></div>
+            <ul id="nav">
+                <li class="subtitle-2"><a href="../">Strona główna</a></li>
+                <li class="subtitle-2"><a href="../gallery/">Wszystkie</a></li>
+                <li class="subtitle-2"><a href="">DVORAK</a></li>
+                <li class="subtitle-2"><a href="../colemak/">COLEMAK</a></li>
+                <li class="subtitle-2"><a href="../qwerty/">QWERTY</a></li>
+                <li class="subtitle-2"><a href="../propose/">Zaproponuj układ</a></li>
             </ul>
+            <div id="scrim"></div>
         </nav>
+        <div id="right"></div>
     </header>
     <div id="container">
         <div class="gallery-item">
@@ -74,30 +76,28 @@
             </div>
             <div class="description">
                 <p>Dvorak</p>
-                <p>is a keyboard layout for English patented in 1936 by August Dvorak and his brother-in-law, William
-                    Dealey, as a faster
-                    and more ergonomic alternative to the QWERTY layout (the de facto standard keyboard layout). Dvorak
-                    proponents claim
-                    that it requires less finger motion and as a result reduces errors, increases typing speed, reduces
-                    repetitive strain
-                    injuries, or is simply more comfortable than QWERTY.</p>
+                <p>Układ opatentowany w 1936 roku przez Augusta Dvoraka i jego szwagra Williama
+                    Dealey'a, jako szybsza i bardziej ergonomiczna alternatywa do QWERTY (de facto standardowego układu)
+                    Dvorak twierził że jego układ wymaga mniej ruchów palcami, pozwala na
+                    szybsze pisanie i mniej błędów, redukuje bóle mięśni oraz po prostu jest bardziej komfortowy niż
+                    QWERTY.</p>
             </div>
         </div>
         <div class="gallery-item">
             <div class="keyboard-layout">
                 <p>
-                    <span>%</span>
-                    <span>7</span>
-                    <span>5</span>
-                    <span>3</span>
-                    <span>1</span>
-                    <span>9</span>
-                    <span>0</span>
-                    <span>2</span>
-                    <span>4</span>
-                    <span>6</span>
-                    <span>8</span>
-                    <span>`</span>
+                    <span>&</span>
+                    <span>[</span>
+                    <span>{</span>
+                    <span>}</span>
+                    <span>(</span>
+                    <span>=</span>
+                    <span>*</span>
+                    <span>)</span>
+                    <span>+</span>
+                    <span>]</span>
+                    <span>!</span>
+                    <span>#</span>
                 </p>
                 <p>
                     <span>;</span>
@@ -111,7 +111,7 @@
                     <span>r</span>
                     <span>l</span>
                     <span>/</span>
-                    <span>=</span>
+                    <span>@</span>
                 </p>
                 <p>
                     <span>a</span>
@@ -142,13 +142,12 @@
             </div>
             <div class="description">
                 <p>Dvorak programisty</p>
-                <p>While the letters are in the same places as the regular Dvorak layout, the numbers and most symbols
-                    have been moved. The
-                    top row contains various brackets and other symbols and the Shift key must be used to type the
-                    numbers, like on
-                    typewriters. The numbers are arranged with the odds under the left hand and the evens under the
-                    right hand, as on
-                    Dvorak's original layout.</p>
+                <p>Podczas gdy litery zostały w tym samym miejscu jak w standardowym Dvoraku, cyfry i symbole w
+                    większości zostały przeniesione.
+                    Górny rząd zawiera różne nawiasy i inne symbole. Aby napisać cyfrę trzeba przytrzymać shift,
+                    zupełnie jak na maszynach do pisania.
+                    Cyfry nieparzyste są po lewej stronie, natomiast cyfry parzyste po prawej, tak jak w pierwszej werji
+                    układu Dvoraka.</p>
             </div>
         </div>
         <div class="gallery-item">
