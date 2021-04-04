@@ -255,6 +255,7 @@ footer, header {
     }
     #nav-button:checked~#scrim {
         opacity: 1;
+        display: block;
     }
     #nav-button:checked+#hamburger {
         background-color: transparent;
@@ -292,6 +293,7 @@ footer, header {
         height: 100%;
         top: 72px;
         transition: opacity .25s var(--animation);
+        display: none;
     }
 }
 
