@@ -50,8 +50,12 @@ form {
     background-color: var(--elevation3dp);
 }
 
-.text-input:focus~label, .text-input:required:valid~label {
+.text-input:focus~label, .text-input:required:valid~label, #email:invalid~label, #email:valid:not(:placeholder-shown)~label {
     transform: translateY(-106%) scale(0.75);
+}
+
+#email::placeholder {
+    opacity: 0;
 }
 
 .text-input:focus~label {
@@ -410,7 +414,7 @@ button:active>.button-hover {
     border-bottom-color: rgba(255, 255, 255, .06);
 }
 
-.switch-input:not(:checked)~.text-field-container .caption, .switch-input:not(:checked)~.text-field-container .text-input {
+.switch-input:not(:checked)~.text-field-container .caption, .switch-input:not(:checked)~.text-field-container .text-input, .switch-input:not(:checked)~.text-field-container label {
     color: rgba(255, 255, 255, .38);
 }
 

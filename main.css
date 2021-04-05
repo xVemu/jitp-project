@@ -96,6 +96,7 @@ h6 {
 }
 
 .body-1 {
+    font-size: 1rem;
     letter-spacing: .5px;
     line-height: 1.5rem;
 }
@@ -115,6 +116,8 @@ h6 {
 .caption {
     font-size: .75rem;
     letter-spacing: .4px;
+    color: var(--medium-white);
+    margin: 0;
 }
 
 .overline {
@@ -122,6 +125,11 @@ h6 {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     line-height: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, .subtitle-1, .subtitle-2, .body-1, .body-2, .overline {
+    color: var(--high-white);
+    margin: 0;
 }
 
 a:link, a:visited {
@@ -147,12 +155,13 @@ body {
 }
 
 #container {
-    margin-top: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
     flex-direction: column;
+    margin-top: 72px;
+    /*TODO  padding: 16px; */
 }
 
 footer, header {
@@ -164,10 +173,13 @@ footer, header {
     justify-content: center;
 }
 
-@media (max-width: 768px) {
+header {
+    position: fixed;
+    z-index: 99;
+}
+
+@media (max-width: 772px) {
     header {
-        position: fixed;
-        z-index: 99;
         height: 72px;
     }
     header>* {
@@ -297,7 +309,7 @@ footer, header {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 773px) {
     #nav .subtitle-2, #home-page span {
         font-weight: normal;
         font-size: medium;
@@ -407,36 +419,38 @@ footer a:hover #github {
     margin: 8px;
     border-radius: 0 4px 4px;
     background-color: var(--elevation1dp);
-    text-align: center;
     color: var(--on-primary);
     display: flex;
     flex-direction: column;
 }
 
 .description {
-    padding: 8px;
+    padding: 16px;
 }
 
 .description p {
     margin: 0;
     color: var(--high-white);
-    text-align: left;
 }
 
-.description p:first-child {
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-    border-bottom: var(--divider) 1px solid;
+@media (min-width: 640px) {
+    .description .body-2 {
+        letter-spacing: .5px;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 .keyboard-layout {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     border-radius: 4px 0 0 4px;
     font-family: 'Roboto Mono', monospace;
     white-space: nowrap;
     font-size: 0;
+    margin-top: 16px;
 }
 
 .keyboard-layout p {
@@ -464,6 +478,9 @@ footer a:hover #github {
     .gallery-item {
         width: 80%;
         flex-direction: row;
+    }
+    .description h6 {
+        border-bottom: var(--divider) 1px solid;
     }
 }
 
