@@ -3,8 +3,6 @@
     flex-wrap: wrap;
 }
 
-/* TODO .keyboard-layout p margin left and right same as up and down */
-
 .gallery-layout {
     border-radius: 4px;
     background-color: var(--elevation1dp);

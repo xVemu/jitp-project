@@ -5,6 +5,10 @@ form {
     margin: 48px 0;
 }
 
+form>div {
+    margin: 8px;
+}
+
 /* .text-field */
 
 .text-field-container {
@@ -417,7 +421,3 @@ button:active>.button-hover {
 .switch-input:not(:checked)~.text-field-container .caption, .switch-input:not(:checked)~.text-field-container .text-input, .switch-input:not(:checked)~.text-field-container label {
     color: rgba(255, 255, 255, .38);
 }
-
-/* on pc */
-
-@media (min-width: 640px) {}
