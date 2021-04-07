@@ -1,37 +1,55 @@
 #container {
     display: block;
     position: relative;
+    overflow-x: hidden;
 }
 
 #blur {
-    background: url(img/background-crop.gif) no-repeat;
-    background-size: 100%;
-    filter: blur(8px);
-    width: 100%;
-    height: 100%;
-    position: absolute;
     z-index: -1;
+    filter: blur(8px);
+}
+
+#main {
+    position: relative;
+}
+
+#texts {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
 }
 
 h1 {
     text-align: center;
-    margin-top: 130px;
-    transition: transform 3s var(--animation);
+    animation: slideInLeft 1.5s var(--animation) forwards;
     color: var(--primary);
     -webkit-text-stroke: 1px black;
-    left: -100%;
-    transform: translateX(100%);
-    position: relative;
 }
 
 h2 {
     color: var(--high-white);
     text-align: center;
-    margin: 16px;
+    margin: 16px 0;
     -webkit-text-stroke: 1px black;
-    transition: transform 3s var(--animation);
-    right: -100%;
-    transform: translateX(-100%);
-    position: relative;
-    display: inline-block;
+    animation: slideInRight 1.5s var(--animation) forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
