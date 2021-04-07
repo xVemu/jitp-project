@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
     <title>Strona główna - układy klawiatury</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="style.css">
     <!-- TODO favicon -->
 </head>
@@ -33,17 +34,60 @@
         <div id="right"></div>
     </header>
     <div id="container">
-        <div id="main">
-            <img src="img/background-crop.gif" width="100%" id="blur">
+        <main>
+            <img src="img/background-big.gif" class="blur" id="blur-big">
+            <img src="img/background-small.gif" class="blur" id="blur-small">
             <div id="texts">
                 <h1>Nie tylko QWERTY!</h1>
                 <h2>Poznaj inne układy</h2>
+                <div class="buttons">
+                    <a href="#colemak">
+                        <button type="submit" class="button-filled">
+                            <span class="button-text">colemak</span>
+                            <div class="button-hover"></div>
+                        </button>
+                    </a>
+                    <a href="#dvorak">
+                        <button id="dvorak-button" type="submit" class="button-filled">
+                            <span class="button-text">dvorak</span>
+                            <div class="button-hover"></div>
+                        </button>
+                    </a>
+                    <a href="#qwerty">
+                        <button type="submit" class="button-filled">
+                            <span class="button-text">qwerty</span>
+                            <div class="button-hover"></div>
+                        </button>
+                    </a>
+                </div>
+
             </div>
+        </main>
+        <div class="layout-text" id="colemak">
+            <h4>Colemak</h4>
+            <h5><strong>2,2 razy mniej</strong> ruchów palcami</h5>
+            <h5><strong>35 razy więcej</strong> słów które tylko jednym rzędem</h5>
+            <p class="body-1">Colemak to nowowczesna i komfortowa alternatywa dla QWERTY.<br>Zmienia wiele
+                klawiszy
+                jednocześnie pozostawiając skróty klawiszowe.</p>
+        </div>
+        <div class="layout-text" id="dvorak">
+            <h4>Dvorak</h4>
+            <h5>Maksymalna szybkość i efektywność</h5>
+            <p class="body-1">Pomimo bycia szybszym niż QWERTY, nie został standardem.<br>Trudnością mogą być skróty
+                klawiszowe.</p>
+        </div>
+        <div class="layout-text" id="qwerty">
+            <h4>QWERTY</h4>
+            <h5><strong>Najpopularniejszy</strong> układ na świecie</h5>
+            <p class="body-1">Układ ten jest najbardziej kompatybilny z różnymi programami i grami.<br>Nie jest on
+                jednak
+                najszybszy i najbardziej komfortowy.</p>
         </div>
 
 
 
-
+        <!-- TODO back to top FAB -->
     </div>
     <footer>
         <span>&#169; 2021 Kamil Kras</span>
