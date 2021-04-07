@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <!-- TODO favicon -->
 </head>
 
 <body>
@@ -36,6 +35,7 @@
         <div id="right"></div>
     </header>
     <div id="container">
+        <div id="start"></div>
         <main>
             <img src="img/background-big.gif" class="blur" id="blur-big">
             <img src="img/background-small.gif" class="blur" id="blur-small">
@@ -65,6 +65,13 @@
 
             </div>
         </main>
+        <a href="#start">
+            <div id="fab">
+                <span class="material-icons-round">
+                    arrow_upward
+                </span>
+            </div>
+        </a>
         <div class="layout-text" id="colemak">
             <h4>Colemak</h4>
             <h5><strong>2,2 razy mniej</strong> ruchów palcami</h5>
@@ -72,12 +79,25 @@
             <p class="body-1">Colemak to nowowczesna i komfortowa alternatywa dla QWERTY.<br>Zmienia wiele
                 klawiszy
                 jednocześnie pozostawiając skróty klawiszowe.</p>
+            <a href="colemak/">
+                <button type="submit" class="button-texted">
+                    <span class="button-text">więcej</span>
+                    <div class="button-hover"></div>
+                </button>
+            </a>
         </div>
         <div class="layout-text" id="dvorak">
             <h4>Dvorak</h4>
             <h5>Maksymalna szybkość i efektywność</h5>
             <p class="body-1">Pomimo bycia szybszym niż QWERTY, nie został standardem.<br>Trudnością mogą być skróty
                 klawiszowe.</p>
+            <a href="dvorak/">
+                <button type="submit" class="button-texted">
+                    <span class="button-text">więcej</span>
+                    <div class="button-hover"></div>
+                </button>
+            </a>
+
         </div>
         <div class="layout-text" id="qwerty">
             <h4>QWERTY</h4>
@@ -85,11 +105,15 @@
             <p class="body-1">Układ ten jest najbardziej kompatybilny z różnymi programami i grami.<br>Nie jest on
                 jednak
                 najszybszy i najbardziej komfortowy.</p>
+            <a href="qwerty/">
+                <button type="submit" class="button-texted">
+                    <span class="button-text">więcej</span>
+                    <div class="button-hover"></div>
+                </button>
+            </a>
+
         </div>
 
-
-
-        <!-- TODO back to top FAB -->
     </div>
     <footer>
         <span>&#169; 2021 Kamil Kras</span>

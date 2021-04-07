@@ -57,7 +57,7 @@ button:active>.button-hover {
 }
 
 .button-filled .button-hover {
-    background-color: var(--on-ru);
+    background-color: var(--on-surface);
 }
 
 .button-filled {
@@ -73,4 +73,10 @@ button:active>.button-hover {
     width: 18px;
     height: 18px;
     font-size: 18px;
+}
+
+.button-texted {
+    color: var(--high-white);
+    background-color: transparent;
+    border: none;
 }

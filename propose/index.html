@@ -35,11 +35,12 @@
         <div id="right"></div>
     </header>
     <div id="container">
-        <form action="" method="post">
+        <form action="" method="get">
             <!-- TODO action="https://vemu.ddns.net:8080/api/keyboard" -->
             <div class="text-field-container">
                 <div class="input-text-field">
-                    <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input">
+                    <input required type="text" autocomplete="off" spellcheck="false" id="name" class="text-input"
+                        name="name">
                     <div class="name-bot"></div>
                     <label for="name" class="subtitle-1">Nazwa*</label>
                 </div>
@@ -51,7 +52,7 @@
                 <span class="subtitle-1">Typ</span>
                 <div class="radio-container">
                     <div class="radio-layout">
-                        <input class="radio" type="radio" id="radio-colemak" name="type" checked>
+                        <input class="radio" type="radio" id="radio-colemak" name="type" value="colemak" checked>
                         <div class="radio-background">
                             <div class="radio-outer"></div>
                             <div class="radio-inner"></div>
@@ -62,7 +63,7 @@
                 </div>
                 <div class="radio-container">
                     <div class="radio-layout">
-                        <input class="radio" type="radio" id="radio-dvorak" name="type">
+                        <input class="radio" type="radio" id="radio-dvorak" name="type" value="dvorak">
                         <div class="radio-background">
                             <div class="radio-outer"></div>
                             <div class="radio-inner"></div>
@@ -73,7 +74,7 @@
                 </div>
                 <div class="radio-container">
                     <div class="radio-layout">
-                        <input class="radio" type="radio" id="radio-qwerty" name="type">
+                        <input class="radio" type="radio" id="radio-qwerty" name="type" value="qwerty">
                         <div class="radio-background">
                             <div class="radio-outer"></div>
                             <div class="radio-inner"></div>
@@ -84,7 +85,7 @@
                 </div>
                 <div class="radio-container">
                     <div class="radio-layout">
-                        <input class="radio" type="radio" id="radio-other" name="type">
+                        <input class="radio" type="radio" id="radio-other" name="type" value="other">
                         <div class="radio-background">
                             <div class="radio-outer"></div>
                             <div class="radio-inner"></div>
@@ -98,44 +99,44 @@
                 <p class="subtitle-1">Uzupełnij układ</p>
                 <div class="keyboard-form">
                     <p>
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
+                        <input name="q" maxlength="1" type="text">
+                        <input name="w" maxlength="1" type="text">
+                        <input name="e" maxlength="1" type="text">
+                        <input name="r" maxlength="1" type="text">
+                        <input name="t" maxlength="1" type="text">
+                        <input name="y" maxlength="1" type="text">
+                        <input name="u" maxlength="1" type="text">
+                        <input name="i" maxlength="1" type="text">
+                        <input name="o" maxlength="1" type="text">
+                        <input name="p" maxlength="1" type="text">
+                        <input name="[" maxlength="1" type="text">
+                        <input name="]" maxlength="1" type="text">
                     </p>
                     <p>
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
+                        <input name="a" maxlength="1" type="text">
+                        <input name="s" maxlength="1" type="text">
+                        <input name="d" maxlength="1" type="text">
+                        <input name="f" maxlength="1" type="text">
+                        <input name="g" maxlength="1" type="text">
+                        <input name="h" maxlength="1" type="text">
+                        <input name="j" maxlength="1" type="text">
+                        <input name="k" maxlength="1" type="text">
+                        <input name="l" maxlength="1" type="text">
+                        <input name=";" maxlength="1" type="text">
+                        <input name="'" maxlength="1" type="text">
+                        <input name="\" maxlength="1" type="text">
                     </p>
                     <p>
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
-                        <input maxlength="1" type="text">
+                        <input name="z" maxlength="1" type="text">
+                        <input name="x" maxlength="1" type="text">
+                        <input name="c" maxlength="1" type="text">
+                        <input name="v" maxlength="1" type="text">
+                        <input name="b" maxlength="1" type="text">
+                        <input name="n" maxlength="1" type="text">
+                        <input name="m" maxlength="1" type="text">
+                        <input name="," maxlength="1" type="text">
+                        <input name="." maxlength="1" type="text">
+                        <input name="/" maxlength="1" type="text">
                     </p>
                 </div>
             </div>
@@ -151,7 +152,7 @@
                 <div class="text-field-container">
                     <div class="input-text-field">
                         <input type="email" autocomplete="off" spellcheck="false" id="email" class="text-input"
-                            placeholder="x">
+                            placeholder="x" name="mail">
                         <div class="name-bot"></div>
                         <label for="name" class="subtitle-1">E-mail*</label>
                     </div>
